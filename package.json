@@ -1,0 +1,61 @@
+{
+  "name": "@jdrydn/graphql-scalars",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "test": "nyc mocha",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": "https://github.com/jdrydn/graphql-scalars",
+  "bugs": "https://github.com/jdrydn/graphql-scalars/issues",
+  "author": "jdrydn <james@jdrydn.com> (https://jdrydn.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@graphql-tools/schema": "^8.3.13",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-sort-requires": "^2.1.0",
+    "graphql14": "npm:graphql@^14.7.0",
+    "graphql15": "npm:graphql@^15.8.0",
+    "graphql16": "npm:graphql@^16.5.0",
+    "mocha": "^8.4.0",
+    "module-alias": "^2.2.2",
+    "nyc": "^15.1.0",
+    "rewire": "^6.0.0",
+    "ulid": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=12.0",
+    "npm": ">=6"
+  },
+  "workspaces": [
+    "./graphql-*/"
+  ],
+  "_moduleAliases": {
+    "graphql-datetime": "./graphql-datetime",
+    "graphql-keyvalue": "./graphql-keyvalue"
+  },
+  "mocha": {
+    "exit": true,
+    "recursive": true,
+    "require": [
+      "module-alias/register",
+      "./test/bootstrap.js"
+    ],
+    "ignore": [
+      "*node_modules*"
+    ],
+    "spec": [
+      "./*/*.test.js"
+    ]
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}
