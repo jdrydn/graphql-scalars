@@ -9,6 +9,7 @@ const typeDefs = /* GraphQL */`
   }
   extend type Mutation {
     setKeyValue(data: KeyValue): KeyValue
+    reflectKeyValue(data: KeyValue): KeyValue
   }
 `;
 
@@ -41,6 +42,9 @@ const resolvers = {
     setKeyValue(_, { data }) {
       assert.deepStrictEqual(data, statics.setKeyValue, 'Expected setKeyValue data variable to match the static data');
       return { ...statics.setKeyValue };
+    },
+    reflectKeyValue(_, { data }) {
+      return { ...data };
     },
   },
 };

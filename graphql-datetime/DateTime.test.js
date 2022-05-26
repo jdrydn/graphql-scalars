@@ -101,7 +101,7 @@ describe('graphql-datetime', () => {
   });
 
   it('should throw an error if a literal boolean is passed in a Mutation', async () => {
-    const prefix = pickValue(process.env.GRAPHQL_VERSION, {
+    const prefix = pickValue(process.env.GRAPHQL_VERSION || 16, {
       '14': 'Expected type DateTime, found false;',
       '15': 'Expected value of type "DateTime", found false;',
       '16': 'Expected value of type "DateTime", found false;',

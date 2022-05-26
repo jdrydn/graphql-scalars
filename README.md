@@ -6,8 +6,8 @@ A collection of GraphQL scalars for you to use in your JavaScript GraphQL projec
 
 Scalar | Package | Version | Source
 ---- | ---- | ---- | ----
-**DateTime** | `@jdrydn/graphql-datetime` | [![NPM](https://badge.fury.io/js/@jdrydn%2Fgraphql-datetime.svg)](https://npm.im/@jdrydn/graphql-datetime) | [`./graphql-datetime`](./graphql-datetime/)
-**KeyValueHash** | `@jdrydn/graphql-keyvaluehash` | [![NPM](https://badge.fury.io/js/@jdrydn%2Fgraphql-keyvalue.svg)](https://npm.im/@jdrydn/graphql-keyvalue) | [`./graphql-datetime`](./graphql-keyvaluehash/)
+**DateTime** | `@jdrydn/graphql-datetime` | [![NPM](https://badge.fury.io/js/@jdrydn%2Fgraphql-datetime.svg)](https://npm.im/@jdrydn/graphql-datetime) | [`./graphql-datetime`](./graphql-datetime/README.md)
+**KeyValue** | `@jdrydn/graphql-keyvalue` | [![NPM](https://badge.fury.io/js/@jdrydn%2Fgraphql-keyvalue.svg)](https://npm.im/@jdrydn/graphql-keyvalue) | [`./graphql-keyvaluehash`](./graphql-keyvaluehash/README.md)
 
 ## Notes
 
