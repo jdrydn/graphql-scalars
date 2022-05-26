@@ -1,6 +1,7 @@
 const assert = require('assert');
 const rewire = require('rewire');
 const { graphql, testGraphQlSchema } = require('../test/graphql');
+const { pickValue } = require('../test/utils');
 const { statics: { getDateTime, setDateTime } } = require('./schema.test');
 
 describe('graphql-datetime', () => {
@@ -100,6 +101,12 @@ describe('graphql-datetime', () => {
   });
 
   it('should throw an error if a literal boolean is passed in a Mutation', async () => {
+    const prefix = pickValue(process.env.GRAPHQL_VERSION, {
+      '14': 'Expected type DateTime, found false;',
+      '15': 'Expected value of type "DateTime", found false;',
+      '16': 'Expected value of type "DateTime", found false;',
+    });
+
     const { data, errors } = await graphql({
       query: /* GraphQL */`
         mutation SetDateTime {
@@ -113,7 +120,7 @@ describe('graphql-datetime', () => {
       errors: [
         {
           locations: [ { column: 29, line: 3 } ],
-          message: 'Expected value of type "DateTime", found false; Can only parse strings & integers to dates but got a: BooleanValue',
+          message: `${prefix} Can only parse strings & integers to dates but got a: BooleanValue`,
         }
       ],
     });
