@@ -1,4 +1,4 @@
-# graphql-datetime
+# @jdrydn/graphql-datetime
 
 [![NPM](https://badge.fury.io/js/@jdrydn%2Fgraphql-datetime.svg)](https://npm.im/@jdrydn/graphql-datetime)
 [![CI](https://github.com/jdrydn/graphql-scalars/actions/workflows/ci.yml/badge.svg)](https://github.com/jdrydn/graphql-scalars/actions/workflows/ci.yml)

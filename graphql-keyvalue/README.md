@@ -1,6 +1,6 @@
-# graphql-keyvalue
+# @jdrydn/graphql-keyvalue
 
-[![NPM](https://badge.fury.io/js/graphql-keyvalue.svg)](https://npm.im/graphql-keyvalue)
+[![NPM](https://badge.fury.io/js/@jdrydn%2Fgraphql-keyvalue.svg)](https://npm.im/@jdrydn/graphql-keyvalue)
 [![CI](https://github.com/jdrydn/graphql-scalars/actions/workflows/ci.yml/badge.svg)](https://github.com/jdrydn/graphql-scalars/actions/workflows/ci.yml)
 
 Standalone GraphQL Scalar type for Key-Value hashes in JavaScript.
@@ -155,8 +155,7 @@ query GetUser {
       "id": "1",
       "name": "jdrydn",
       "state": {
-        "signedInWith": "APPLE",
-        "finishedOnboarding": true
+        "signUpSource": "APPLE-APP-STORE"
       }
     }
   }
@@ -174,7 +173,7 @@ mutation UpdateUser {
 {
   "data": {
     "updateUserState": {
-      "signedInWith": "APPLE",
+      "signUpSource": "APPLE-APP-STORE",
       "finishedOnboarding": true
     }
   }
